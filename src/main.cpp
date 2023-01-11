@@ -1,6 +1,21 @@
 #include <Arduino.h>
 #include <LiquidCrystal_I2C.h>
 
+/*
+KALIBRASI SENSOR PRESSURE
+PRESSURE SENSOR OUTPUT
+*/
+
+// ISI DISINI 
+const int BAR_0 = 0 ;
+const int BAR_1 = 0 ;
+const int BAR_2 = 0 ;
+const int BAR_3 = 0 ;
+const int BAR_4 = 0 ;
+const int BAR_5 = 0 ;
+const int BAR_6 = 0 ;
+const int BAR_7 = 0 ;
+
 // Konfigurasi Pin
 
 // Sensor preasure
@@ -108,8 +123,8 @@ void loop() {
   7 bar
 
   */
-  presIn = ultimap(raw_1,187,986,0,7);
-  prsOut = ultimap(raw_2,187,986,0,7);
+  presIn = ultimap(raw_1,BAR_0,BAR_7,0,7);
+  prsOut = ultimap(raw_2,BAR_0,BAR_7,0,7);
   // put your main code here, to run repeatedly:
   if(!digitalRead(pressure_1) && aktif !=1 ){
     Serial.println("press 1");
