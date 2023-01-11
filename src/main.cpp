@@ -97,8 +97,19 @@ void loop() {
   // delay(1);
   raw_1 = analogRead(pressure_sens_1);
   raw_2 = analogRead(pressure_sens_2);
-  presIn = ultimap(raw_1,279,986,0,6);
-  prsOut = ultimap(raw_2,279,986,0,6);
+  // Kalibrasi
+  /*
+  
+  
+  presIn = ultimap(raw_1,0bar ,7bar ,0,7);
+  1 bar
+  2..
+
+  7 bar
+
+  */
+  presIn = ultimap(raw_1,187,986,0,7);
+  prsOut = ultimap(raw_2,187,986,0,7);
   // put your main code here, to run repeatedly:
   if(!digitalRead(pressure_1) && aktif !=1 ){
     Serial.println("press 1");
