@@ -28,13 +28,13 @@ KALIBRASI TOMBOL
     RESSURE OUT < SETTING BUTTON + BATAS BAWAH = VALVE MASUK NYALA
 BACA BARIS 180
 */
-// CHARGING VALVE / BATAS ATAS
-const int CALH19 = 1;
-const int CALH22 = 1;
-const int CALH25 = 1;
+// VENTING VALVE / BATAS ATAS
+const int CALH19 = 6;
+const int CALH22 = 6;
+const int CALH25 = 6;
 
-// VENTING VALVE / BATAS BAWAH
-const int CALL19 = 0;
+// CHARGING VALVE / BATAS BAWAH
+const int CALL19 = -1;
 const int CALL22 = 0;
 const int CALL25 = 0;
 
